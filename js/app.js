@@ -31,7 +31,7 @@ Seguro.prototype.cotizarSeguro = function () {
   }
 
   // Leer el año
-  const diferencia = ne Date().getFullYear() - this.year;
+  const diferencia = new Date().getFullYear() - this.year;
 
   // Cada año que la diferencia es mayor, el costo va a reducirse un 3%
   cantidad -= ((diferencia * 3) * cantidad ) / 100;
@@ -109,7 +109,7 @@ UI.prototype.mostrarResultado = (total, seguro) => {
   }
 
   // Crea el resultado 
-  const div = document,createElement('div');
+  const div = document.createElement('div');
   div.classList.add('mt-10');
 
   div.innerHTML = `
